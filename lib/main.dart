@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:guess_number/game.dart';
 
 void main() {
   runApp(const MyApp());
@@ -108,7 +109,9 @@ class HomePage extends StatelessWidget {
                   child: Text('GUESS'),
                   onPressed: () {
                     var input = _controller.text;
-
+                    int.tryParse(input);
+                    var game = Game();
+                    //game.doGuess();
                     showDialog(
                       context: context,
                       barrierDismissible: false,
